@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jsv:DocumentRoot xmlns:jsv="http://tns.tibco.com/bw/model/core/jobSV">
+  <jobSharedVariables>
+    <jobSharedVariable name="GroupInterfaceInfo" type="{http://www.cspi_library.org/Library}InterfaceInfos" initialValueMode="none"/>
+    <jobSharedVariable name="DefaultInfo" type="{http://www.cspi_library.org/Library}DefaultInfo" initialValueMode="none"/>
+  </jobSharedVariables>
+  <import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Library" location="../Schemas/Library.xsd"/>
+</jsv:DocumentRoot>

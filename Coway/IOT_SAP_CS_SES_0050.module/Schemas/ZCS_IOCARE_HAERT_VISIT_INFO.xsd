@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ZCS_IOCARE_HAERT_VISIT_INFO" xmlns:tns="http://www.example.org/ZCS_IOCARE_HAERT_VISIT_INFO" elementFormDefault="qualified" xmlns:hd="http://www.example.org/HEADER">
+<import namespace="http://www.example.org/HEADER"></import>
+<element name="ZCS_IOCARE_HAERT_VISIT_INFO_req">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="I_ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_PERNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_SYSTEM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_S_TIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+
+<element name="ZCS_IOCARE_HAERT_VISIT_INFO_rsp">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="ES_RETURN" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MESSAGE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="E_LAST_DATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_NEXT_DATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_NEXT_MON" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_SVC_PERIOD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_XC_E_TIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>

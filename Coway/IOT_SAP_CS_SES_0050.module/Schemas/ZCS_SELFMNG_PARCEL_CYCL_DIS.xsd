@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ZCS_SELFMNG_PARCEL_CYCL_DIS" xmlns:tns="http://www.example.org/ZCS_SELFMNG_PARCEL_CYCL_DIS" elementFormDefault="qualified" xmlns:hd="http://www.example.org/HEADER">
+<import namespace="http://www.example.org/HEADER"></import>
+<element name="ZCS_SELFMNG_PARCEL_CYCL_DIS_req">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="I_ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_SERNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="ET_ITEM" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MATNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MAKTX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FILTER_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MAKTX_F" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="LAST_DATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="NEXT_DATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CHG_CYCLE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PRODH" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="ET_ESB" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="IF_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IF_UUID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IF_HOST" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IF_DATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IF_ADDITIONAL_DATA" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RST_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RST_MSG" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+
+<element name="ZCS_SELFMNG_PARCEL_CYCL_DIS_rsp">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="ES_RETURN" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MESSAGE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="ET_ITEM" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MATNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MAKTX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FILTER_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MAKTX_F" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="LAST_DATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="NEXT_DATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CHG_CYCLE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PRODH" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>

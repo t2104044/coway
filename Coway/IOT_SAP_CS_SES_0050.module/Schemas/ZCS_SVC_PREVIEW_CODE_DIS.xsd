@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ZCS_SVC_PREVIEW_CODE_DIS" xmlns:tns="http://www.example.org/ZCS_SVC_PREVIEW_CODE_DIS" elementFormDefault="qualified" xmlns:hd="http://www.example.org/HEADER">
+<import namespace="http://www.example.org/HEADER"></import>
+<element name="ZCS_SVC_PREVIEW_CODE_DIS_req">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="I_ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_PERNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_SYSTEM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_S_TIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+
+<element name="ZCS_SVC_PREVIEW_CODE_DIS_rsp">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="E_RETURN" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MESSAGE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="E_CERTI_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_IMG_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_URL_KEY" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_XC_E_TIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:r3="http://www.tibco.com/xmlns/sapscalar/2015/05" xmlns:tns="http://www.tibco.com/xmlns/sap/SAP/ZSD_1000_IOT_SSE_001_IF" elementFormDefault="unqualified" targetNamespace="http://www.tibco.com/xmlns/sap/SAP/ZSD_1000_IOT_SSE_001_IF" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:import namespace="http://www.tibco.com/xmlns/sapscalar/2015/05" schemaLocation="/Schemas/.SAP/SAPSchema.xsd"/>
+    <xsd:element name="RequestInputType" type="tns:RequestInputTypeParam"/>
+    <xsd:complexType name="RequestInputTypeParam">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="sessionID" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="timeout" type="xsd:long"/>
+            <xsd:element name="RfcRequest" type="tns:ZSD_1000_IOT_SSE_001_IF_RequestParam"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="RfcRequest" type="tns:ZSD_1000_IOT_SSE_001_IF_RequestParam"/>
+    <xsd:complexType name="ZSD_1000_IOT_SSE_001_IF_RequestParam">
+        <xsd:sequence>
+            <xsd:element minOccurs="1" name="ET_ESB" type="tns:sequence_lsqb_ZCWSDCS7000_rsqb_"/>
+            <xsd:element minOccurs="1" name="ET_RETURN" type="tns:sequence_lsqb_ZSDS1563_rsqb_"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="RequestOutputType" type="tns:RequestOutputTypeParam"/>
+    <xsd:complexType name="RequestOutputTypeParam">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="sessionID" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CPIC_ID" type="xsd:string"/>
+            <xsd:element name="RfcResponse" type="tns:ZSD_1000_IOT_SSE_001_IF_ResponseParam"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="RfcResponse" type="tns:ZSD_1000_IOT_SSE_001_IF_ResponseParam"/>
+    <xsd:complexType name="ZSD_1000_IOT_SSE_001_IF_ResponseParam">
+        <xsd:sequence>
+            <xsd:element minOccurs="1" name="ET_ESB" type="tns:sequence_lsqb_ZCWSDCS7000_rsqb_"/>
+            <xsd:element minOccurs="1" name="ET_RETURN" type="tns:sequence_lsqb_ZSDS1563_rsqb_"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="SAPSystemException" type="tns:ZSD_1000_IOT_SSE_001_IF_FaultParam"/>
+    <xsd:complexType name="ZSD_1000_IOT_SSE_001_IF_FaultParam">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="OTHERS" type="tns:RFCException"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="sequence_lsqb_ZCWSDCS7000_rsqb_">
+        <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="unbounded" minOccurs="0" name="item" type="tns:ZCWSDCS7000"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ZCWSDCS7000">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="IF_ID" nillable="true" r3:abapType="C" r3:document="" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="0">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="20"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="IF_UUID" nillable="true" r3:abapType="C" r3:document="" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="40">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="36"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="IF_HOST" nillable="true" r3:abapType="C" r3:document="" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="112">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="100"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="IF_DATE" nillable="true" r3:abapType="C" r3:document="" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="312">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="14"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="IF_ADDITIONAL_DATA" nillable="true" r3:abapType="C" r3:document="" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="340">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="100"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="RST_CD" nillable="true" r3:abapType="C" r3:document="" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="540">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="RST_MSG" nillable="true" r3:abapType="C" r3:document="" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="548">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="1000"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="sequence_lsqb_ZSDS1563_rsqb_">
+        <xsd:sequence>
+            <xsd:element form="unqualified" maxOccurs="unbounded" minOccurs="0" name="item" type="tns:ZSDS1563"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ZSDS1563">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="ORDER_NO" nillable="true" r3:abapType="C" r3:document="" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="0">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="KUNNR" nillable="true" r3:abapType="C" r3:document="Customer Number 1" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="24">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="10"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="TELF1" nillable="true" r3:abapType="C" r3:document="First telephone number" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="44">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="16"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="TELF2" nillable="true" r3:abapType="C" r3:document="Second telephone number" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="76">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="16"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="STCD2" nillable="true" r3:abapType="C" r3:document="Tax Number 2" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="108">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="11"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="STCD1" nillable="true" r3:abapType="C" r3:document="Tax Number 1" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="130">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="16"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="RFCException">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="msg" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="msgCode" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

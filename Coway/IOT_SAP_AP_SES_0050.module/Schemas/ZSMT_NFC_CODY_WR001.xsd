@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ZSMT_NFC_CODY_WR001" xmlns:tns="http://www.example.org/ZSMT_NFC_CODY_WR001" elementFormDefault="qualified" xmlns:hd="http://www.example.org/HEADER">
+<import namespace="http://www.example.org/HEADER"></import>
+<element name="ZSMT_NFC_CODY_WR001_req">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="I_DUST" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_GAS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_GOODS_SN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_RECOMAND" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_USETIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="IT_RAW" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="DATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DUST" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GAS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="ET_ESB" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="IF_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IF_UUID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IF_HOST" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IF_DATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IF_ADDITIONAL_DATA" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RST_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RST_MSG" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+
+<element name="ZSMT_NFC_CODY_WR001_rsp">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="E_RETURN" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MESSAGE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="IT_RAW" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="DATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DUST" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GAS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>

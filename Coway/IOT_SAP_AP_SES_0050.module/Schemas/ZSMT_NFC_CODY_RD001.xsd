@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ZSMT_NFC_CODY_RD001" xmlns:tns="http://www.example.org/ZSMT_NFC_CODY_RD001" elementFormDefault="qualified" xmlns:hd="http://www.example.org/HEADER">
+<import namespace="http://www.example.org/HEADER"></import>
+<element name="ZSMT_NFC_CODY_RD001_req">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="I_GOODS_SN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="ET_DATA" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="JOB_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="USETIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DUST" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GAS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RECOMAND" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="ET_ESB" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="IF_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IF_UUID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IF_HOST" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IF_DATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IF_ADDITIONAL_DATA" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RST_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RST_MSG" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+
+<element name="ZSMT_NFC_CODY_RD001_rsp">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="E_RETURN" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MESSAGE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="E_1ST_FILTER_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_1ST_FILTER_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_ADDR1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_ADDR2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_CUST_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_DUST_LAST" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_DUST_LAST_OUT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_FILTER_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_FILTER_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_GAS_LAST" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_GOODS_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_GOODS_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_TYPE_LAST" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="ET_DATA" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="JOB_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="USETIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DUST" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GAS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RECOMAND" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>

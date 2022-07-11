@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ZCS_SEND_CHK_FILTER_LIST" xmlns:tns="http://www.example.org/ZCS_SEND_CHK_FILTER_LIST" elementFormDefault="qualified" xmlns:hd="http://www.example.org/HEADER">
+<import namespace="http://www.example.org/HEADER"></import>
+<element name="ZCS_SEND_CHK_FILTER_LIST_req">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="I_STDYM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="ET_LIST" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="STDYM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SERNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FILTER_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FILTER_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+
+<element name="ZCS_SEND_CHK_FILTER_LIST_rsp">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="E_RETURN" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MESSAGE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="ET_LIST" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="STDYM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SERNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FILTER_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FILTER_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>

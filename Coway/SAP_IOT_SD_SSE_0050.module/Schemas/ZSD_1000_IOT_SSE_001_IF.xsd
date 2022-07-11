@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ZSD_1000_IOT_SSE_001_IF" xmlns:tns="http://www.example.org/ZSD_1000_IOT_SSE_001_IF" elementFormDefault="qualified" xmlns:hd="http://www.example.org/HEADER">
+	<import namespace="http://www.example.org/HEADER"></import>
+	<element name="ZSD_1000_IOT_SSE_001_IF_req">
+    	<complexType>
+    		<sequence>
+    			<element maxOccurs="1" minOccurs="1" ref="hd:HEADER"/>
+				<element maxOccurs="1" minOccurs="0" name="DATA">
+					<complexType>
+						<sequence>
+							<element maxOccurs="unbounded" minOccurs="0" name="ES_RETURN"  nillable="true">
+                                <complexType>
+                                    <sequence>
+							            <element maxOccurs="1" minOccurs="0" name="ORDER_NO" nillable="true" type="string"/>
+							            <element maxOccurs="1" minOccurs="0" name="KUNNR" nillable="true" type="string"/>
+							            <element maxOccurs="1" minOccurs="0" name="TELF1" nillable="true" type="string"/>
+							            <element maxOccurs="1" minOccurs="0" name="TELF2" nillable="true" type="string"/>
+							            <element maxOccurs="1" minOccurs="0" name="STCD2" nillable="true" type="string"/>
+							            <element maxOccurs="1" minOccurs="0" name="STCD1" nillable="true" type="string"/>
+				       				</sequence>
+				       			</complexType>
+				       		</element>
+				       	</sequence>
+				      </complexType>
+                </element>
+    		</sequence>
+    	</complexType>
+    </element>
+	<element name="ZSD_1000_IOT_SSE_001_IF_rsp">
+    	<complexType>
+    		<sequence>
+    			<element maxOccurs="1" minOccurs="1" ref="hd:HEADER"/>
+    			<element maxOccurs="1" minOccurs="0" name="DATA">
+					<complexType>
+						<sequence>
+							<element maxOccurs="unbounded" minOccurs="0" name="ES_RETURN"  nillable="true">
+                                <complexType>
+                                    <sequence>
+							            <element maxOccurs="1" minOccurs="0" name="ORDER_NO" nillable="true" type="string"/>
+							            <element maxOccurs="1" minOccurs="0" name="KUNNR" nillable="true" type="string"/>
+							            <element maxOccurs="1" minOccurs="0" name="TELF1" nillable="true" type="string"/>
+							            <element maxOccurs="1" minOccurs="0" name="TELF2" nillable="true" type="string"/>
+							            <element maxOccurs="1" minOccurs="0" name="STCD2" nillable="true" type="string"/>
+							            <element maxOccurs="1" minOccurs="0" name="STCD1" nillable="true" type="string"/>
+				       				</sequence>
+				       			</complexType>
+				       		</element>
+				       	</sequence>
+				      </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

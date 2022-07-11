@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:property="http://ns.tibco.com/bw/property" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_0VmuYKvDEeuBh82pOfi8fg" targetNamespace="http://tns.tibco.com/bw/composite/CSPI_Library" name="CSPI_Library" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_0lEtwKvDEeuBh82pOfi8fg" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_0lUlYKvDEeuBh82pOfi8fg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_0lXosKvDEeuBh82pOfi8fg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_0lY20KvDEeuBh82pOfi8fg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_0lasAKvDEeuBh82pOfi8fg" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_0lb6IKvDEeuBh82pOfi8fg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_0ldIQKvDEeuBh82pOfi8fg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_0le9cKvDEeuBh82pOfi8fg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_0lgyoKvDEeuBh82pOfi8fg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_H827ILRyEeupgMJAngAmSg" name="Encoding" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_lV1gcKvkEeuBh82pOfi8fg" name="/Resources/Jdbc/DatabaseURL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_lBKQ8KvkEeuBh82pOfi8fg" name="/Resources/Jdbc/JDBCDriver" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_rOq8EKvkEeuBh82pOfi8fg" name="/Resources/Jdbc/LoginTimeout_sec" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_rSd28KvkEeuBh82pOfi8fg" name="/Resources/Jdbc/MaximumConnections" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_lpgqYKvkEeuBh82pOfi8fg" name="/Resources/Jdbc/Password" type="property:password" scaext:simpleValue="#!DrKRha/0Cj6rJ+jNsgMUEQ==" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_lf6pgKvkEeuBh82pOfi8fg" name="/Resources/Jdbc/UserName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_A7TgQKvoEeuBh82pOfi8fg" name="/Resources/Jms/Password" type="property:password" scaext:simpleValue="#!scYlqBgTC0fybeUNYNPAiA==" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_BFrkQKvoEeuBh82pOfi8fg" name="/Resources/Jms/ProviderURL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="__SnEIKvnEeuBh82pOfi8fg" name="/Resources/Jms/UserName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Acb2oLRyEeupgMJAngAmSg" name="/BaseInfo/WorkGroupp" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_DVB0YLRyEeupgMJAngAmSg" name="/BaseInfo/CfgFileName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_FOZw0LRyEeupgMJAngAmSg" name="/BaseInfo/CfgFileDir" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_tbhIQLbTEeugcN4Tns9_MA" name="/Destination/Alert" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_pmKx4LbUEeugcN4Tns9_MA" name="/Destination/DBLog" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_qrVDILbUEeugcN4Tns9_MA" name="/Destination/FileLog" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_UvoCINV8Eey0HcKCpsmbLw" name="/Destination/EngineResource" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+</sca:composite>

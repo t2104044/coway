@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ZCS_RECEIVE_AIR_TP_INS" xmlns:tns="http://www.example.org/ZCS_RECEIVE_AIR_TP_INS" elementFormDefault="qualified" xmlns:hd="http://www.example.org/HEADER">
+<import namespace="http://www.example.org/HEADER"></import>
+<element name="ZCS_RECEIVE_AIR_TP_INS_req">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="IT_DAY" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="MANDT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DEV_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="EQP_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_PM10_IDX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_PM25" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_VOCS_IDX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_CO2_IDX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_UNPL_IDX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_POLT_IDX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_IAQ_IDX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="IT_TIME" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="MANDT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DEV_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STAT_ST_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STAT_FNS_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STAT_DT_CNT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FULL_TIME_HOUR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="OPR_TIME_HOUR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="OPR_RATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MONI_TIME_HOUR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="IT_GRADE" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="MANDT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DEV_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STAT_ST_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STAT_FNS_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IAQ_GRADE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IAQ_FILTER" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+
+<element name="ZCS_RECEIVE_AIR_TP_INS_rsp">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="ES_RETURN" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MESSAGE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="IT_DAY" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="MANDT" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="DT" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="DEV_ID" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="EQP_DT" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="AVG_PM10_IDX" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="AVG_PM25" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="AVG_VOCS_IDX" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="AVG_CO2_IDX" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="AVG_UNPL_IDX" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="AVG_POLT_IDX" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="AVG_IAQ_IDX" type="string" maxOccurs="1" minOccurs="0"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="IT_TIME" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="MANDT" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="DM" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="DEV_ID" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="STAT_ST_DT" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="STAT_FNS_DT" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="STAT_DT_CNT" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="FULL_TIME_HOUR" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="OPR_TIME_HOUR" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="OPR_RATE" type="string" maxOccurs="1" minOccurs="0"/>
+									<element name="MONI_TIME_HOUR" type="string" maxOccurs="1" minOccurs="0"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="IT_GRADE" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="MANDT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DEV_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STAT_ST_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STAT_FNS_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IAQ_GRADE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IAQ_FILTER" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>

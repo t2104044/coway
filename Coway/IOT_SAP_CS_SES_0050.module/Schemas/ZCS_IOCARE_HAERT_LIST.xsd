@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ZCS_IOCARE_HAERT_LIST" xmlns:tns="http://www.example.org/ZCS_IOCARE_HAERT_LIST" elementFormDefault="qualified" xmlns:hd="http://www.example.org/HEADER">
+<import namespace="http://www.example.org/HEADER"></import>
+<element name="ZCS_IOCARE_HAERT_LIST_req">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="I_E_YYYYMM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_S_YYYYMM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_PERNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_SYSTEM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_S_TIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="ET_DATA" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MATNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MAKTX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="OTH_CD_CHAR1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODY_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODY_ID_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MOB_NUMBER" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PLAN_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PLAN_YM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PLAN_CH" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PLAN_TM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="ET_FILTER" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="PLAN_YM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PLAN_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FILTER_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FILTER_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FT_CYCLE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+
+<element name="ZCS_IOCARE_HAERT_LIST_rsp">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="ES_RETURN" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MESSAGE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="E_CUST_TP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_CUST_TP_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_FIRST_INST_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_FREE_END_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_MS_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_OWNER_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_PAGE_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_XC_E_TIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="ET_DATA" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MATNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MAKTX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="OTH_CD_CHAR1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODY_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODY_ID_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MOB_NUMBER" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PLAN_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PLAN_YM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PLAN_CH" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PLAN_TM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="ET_FILTER" maxOccurs="unbounded" minOccurs="1">
+							<complexType>
+								<sequence>
+									<element name="PLAN_YM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PLAN_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FILTER_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FILTER_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FT_CYCLE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>

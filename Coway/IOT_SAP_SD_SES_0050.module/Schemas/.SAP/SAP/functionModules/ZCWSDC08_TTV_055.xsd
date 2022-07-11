@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:r3="http://www.tibco.com/xmlns/sapscalar/2015/05" xmlns:tns="http://www.tibco.com/xmlns/sap/SAP/ZCWSDC08_TTV_055" elementFormDefault="unqualified" targetNamespace="http://www.tibco.com/xmlns/sap/SAP/ZCWSDC08_TTV_055" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:import namespace="http://www.tibco.com/xmlns/sapscalar/2015/05" schemaLocation="/Schemas/.SAP/SAPSchema.xsd"/>
+    <xsd:element name="RequestInputType" type="tns:RequestInputTypeParam"/>
+    <xsd:complexType name="RequestInputTypeParam">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="sessionID" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="timeout" type="xsd:long"/>
+            <xsd:element name="RfcRequest" type="tns:ZCWSDC08_TTV_055_RequestParam"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="RfcRequest" type="tns:ZCWSDC08_TTV_055_RequestParam"/>
+    <xsd:complexType name="ZCWSDC08_TTV_055_RequestParam">
+        <xsd:sequence>
+            <xsd:element minOccurs="1" name="AUDAT" r3:abapType="D" r3:document="증빙일 (수신/발신 일자)" r3:javaType="javax.xml.datatype.XMLGregorianCalendar" r3:jcoType="1">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="8"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="LOGONID" r3:abapType="C" r3:document="사용자 ID" r3:javaType="java.lang.String" r3:jcoType="0">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="20"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="1" name="VKGRP" r3:abapType="C" r3:document="영업 그룹" r3:javaType="java.lang.String" r3:jcoType="0">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="3"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="RequestOutputType" type="tns:RequestOutputTypeParam"/>
+    <xsd:complexType name="RequestOutputTypeParam">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="sessionID" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="CPIC_ID" type="xsd:string"/>
+            <xsd:element name="RfcResponse" type="tns:ZCWSDC08_TTV_055_ResponseParam"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="RfcResponse" type="tns:ZCWSDC08_TTV_055_ResponseParam"/>
+    <xsd:complexType name="ZCWSDC08_TTV_055_ResponseParam">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="E_STRUC" type="tns:ZCWSDCS0019"/>
+            <xsd:element minOccurs="0" name="RETURN_MESSAGE" r3:abapType="C" r3:document="메시지 텍스트" r3:javaType="java.lang.String" r3:jcoType="0">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="220"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="RETURN_TYPE" r3:abapType="C" r3:document="메시지 유형: S 성공, E 오류, W 경고, I 정보, A 중단" r3:javaType="java.lang.String" r3:jcoType="0">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="1"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="SAPSystemException" type="tns:ZCWSDC08_TTV_055_FaultParam"/>
+    <xsd:complexType name="ZCWSDC08_TTV_055_FaultParam">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="OTHERS" type="tns:RFCException"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ZCWSDCS0019">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="COMP_CNT" nillable="true" r3:abapType="C" r3:document="완납 건수" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="0">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="COMP_AMT" nillable="true" r3:abapType="C" r3:document="완납 금액" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="8">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="INCO_CNT" nillable="true" r3:abapType="C" r3:document="미납 건수" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="32">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="INCO_AMT" nillable="true" r3:abapType="C" r3:document="미납 금액" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="40">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CANC_CNT" nillable="true" r3:abapType="C" r3:document="취소 건수" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="64">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CANC_AMT" nillable="true" r3:abapType="C" r3:document="취소 금액" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="72">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="RESA_CNT" nillable="true" r3:abapType="C" r3:document="반품 건수" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="96">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="RESA_AMT" nillable="true" r3:abapType="C" r3:document="반품 금액" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="104">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="SPMON" nillable="true" r3:abapType="C" r3:document="수납대상월" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="128">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="6"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="BEGDA" nillable="true" r3:abapType="C" r3:document="수납대상기간_시작일" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="140">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="8"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ENDDA" nillable="true" r3:abapType="C" r3:document="수납대상기간_종료일" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="156">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="8"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="STDDA" nillable="true" r3:abapType="C" r3:document="수납마감일" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="172">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="8"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CDCNT" nillable="true" r3:abapType="C" r3:document="카드승인건수" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="188">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CDAMT1" nillable="true" r3:abapType="C" r3:document="카드승인액" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="196">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CDAMT2" nillable="true" r3:abapType="C" r3:document="카드수납액" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="220">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CDAMT3" nillable="true" r3:abapType="C" r3:document="카드미수납액" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="244">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ACCNT" nillable="true" r3:abapType="C" r3:document="가상계좌입금건수" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="268">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ACAMT1" nillable="true" r3:abapType="C" r3:document="가상계좌입금액" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="276">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ACAMT2" nillable="true" r3:abapType="C" r3:document="가상계좌수납액" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="300">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="ACAMT3" nillable="true" r3:abapType="C" r3:document="가상계좌미수납액" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="324">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CDECNT" nillable="true" r3:abapType="C" r3:document="카드매입청구 오류건수" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="348">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CDDCNT" nillable="true" r3:abapType="C" r3:document="카드대체 청구건수" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="356">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="CDNCNT" nillable="true" r3:abapType="C" r3:document="대체미처리 건수" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="364">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="GRCNT" nillable="true" r3:abapType="C" r3:document="미입고 건수" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="372">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="GICNT" nillable="true" r3:abapType="C" r3:document="진행중 반납건수(미출고)" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="380">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="MVCNT" nillable="true" r3:abapType="C" r3:document="이동요청 미확인 건수" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="388">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="4"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="REQ_AMT" nillable="true" r3:abapType="C" r3:document="청구금액" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="396">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="REC_AMT" nillable="true" r3:abapType="C" r3:document="수납금액" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="420">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="REC_RATE" nillable="true" r3:abapType="C" r3:document="입금율" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="444">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="5"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="MENGE" nillable="true" r3:abapType="C" r3:document="차용 수량" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="454">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="15"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="MENGE2" nillable="true" r3:abapType="C" r3:document="이동 수량" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="484">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="15"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="MENGE3" nillable="true" r3:abapType="C" r3:document="완납 수량" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="514">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="15"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="REMENGE" nillable="true" r3:abapType="C" r3:document="잔여 수량" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="544">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="15"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="PATWR" nillable="true" r3:abapType="C" r3:document="패널티 금액" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="574">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="15"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="REQ_AMT_LAST" nillable="true" r3:abapType="C" r3:document="청구금액(전월)" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="604">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="REC_AMT_LAST" nillable="true" r3:abapType="C" r3:document="수납금액(전월)" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="628">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="12"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="REC_RATE_LAST" nillable="true" r3:abapType="C" r3:document="입금율(전월)" r3:javaType="java.lang.String" r3:jcoType="0" r3:offset="652">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="5"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="RFCException">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="msg" nillable="true" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="msgCode" nillable="true" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

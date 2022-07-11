@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ZCS_IOCARE_AIR_INFO" xmlns:tns="http://www.example.org/ZCS_IOCARE_AIR_INFO" elementFormDefault="qualified" xmlns:hd="http://www.example.org/HEADER">
+<import namespace="http://www.example.org/HEADER"></import>
+<element name="ZCS_IOCARE_AIR_INFO_req">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="I_ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+
+<element name="ZCS_IOCARE_AIR_INFO_rsp">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="ES_TIME2" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="DM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DEV_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STAT_ST_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STAT_FNS_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STAT_DT_CNT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FULL_TIME_HOUR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="OPR_TIME_HOUR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="OPR_RATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MONI_TIME_HOUR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="ES_PM25" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="CNT_GOOD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CNT_NORMAL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CNT_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CNT_VERY_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_GOOD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_NORMAL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_VERY_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="ES_IAQ" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="CNT_GOOD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CNT_NORMAL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CNT_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CNT_VERY_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_GOOD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_NORMAL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_VERY_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="ES_RETURN" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MESSAGE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="ES_GRADE" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="DM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DEV_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STAT_ST_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STAT_FNS_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IAQ_GRADE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IAQ_FILTER" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="ES_CO2" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="CNT_GOOD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CNT_NORMAL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CNT_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CNT_VERY_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_GOOD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_NORMAL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_VERY_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="ES_VOCS" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="CNT_GOOD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CNT_NORMAL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CNT_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CNT_VERY_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_GOOD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_NORMAL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_VERY_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="ES_TIME" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="DM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DEV_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STAT_ST_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STAT_FNS_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STAT_DT_CNT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FULL_TIME_HOUR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="OPR_TIME_HOUR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="OPR_RATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MONI_TIME_HOUR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="ES_PM10" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="CNT_GOOD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CNT_NORMAL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CNT_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CNT_VERY_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_GOOD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_NORMAL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVG_VERY_BAD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>

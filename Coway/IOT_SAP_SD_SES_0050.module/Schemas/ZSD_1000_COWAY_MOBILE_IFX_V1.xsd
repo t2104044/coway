@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.orgZSD_1000_COWAY_MOBILE_IFX_V1" xmlns:tns="http://www.example.org/ZSD_1000_COWAY_MOBILE_IFX_V1" elementFormDefault="qualified" xmlns:hd="http://www.example.org/HEADER">
+	<import namespace="http://www.example.org/HEADER"></import>
+	<element name="ZSD_1000_COWAY_MOBILE_IFX_V1_req">
+    	<complexType>
+    		<sequence>
+    			<element maxOccurs="1" minOccurs="1" ref="hd:HEADER"/>
+    			<element maxOccurs="1" minOccurs="0" name="DATA">
+				        <complexType>
+				          <sequence>
+				            <element maxOccurs="1" minOccurs="0" name="IV_SERNR" nillable="true" type="string"/>
+				            <element maxOccurs="1" minOccurs="0" name="I_XC_PERNR" nillable="true" type="string"/>
+				            <element maxOccurs="1" minOccurs="0" name="I_XC_SYSTEM" nillable="true" type="string"/>
+				            <element maxOccurs="1" minOccurs="0" name="I_XC_S_TIME" nillable="true" type="string"/>
+				          </sequence>
+				        </complexType>
+    			</element>
+    		</sequence>
+    	</complexType>
+    </element>
+	<element name="ZSD_1000_COWAY_MOBILE_IFX_V1_rsp">
+    	<complexType>
+    		<sequence>
+    			<element maxOccurs="1" minOccurs="1" ref="hd:HEADER"/>
+    			<element maxOccurs="1" minOccurs="0" name="DATA">
+					<complexType>
+						<sequence>
+				            <element maxOccurs="1" minOccurs="0" name="ES_LIST">
+				              <complexType>
+				                <sequence>
+				                    <element maxOccurs="1" minOccurs="0" name="SERNR" nillable="true" type="string"/>
+				                    <element maxOccurs="1" minOccurs="0" name="SERNR_OLD" nillable="true" type="string"/>
+				                    <element maxOccurs="1" minOccurs="0" name="ORDER_NO" nillable="true" type="string"/>
+				                    <element maxOccurs="1" minOccurs="0" name="TELF1" nillable="true" type="string"/>
+				                    <element maxOccurs="1" minOccurs="0" name="TELF2" nillable="true" type="string"/>
+				                    <element maxOccurs="1" minOccurs="0" name="SMTP_ADDR" nillable="true" type="string"/>
+				                    <element maxOccurs="1" minOccurs="0" name="INBDT" nillable="true" type="string"/>
+				                    <element maxOccurs="1" minOccurs="0" name="CONTRACT_ID" nillable="true" type="string"/>
+				                    <element maxOccurs="1" minOccurs="0" name="CONTRACT_ID_TX" nillable="true" type="string"/>
+				                    <element maxOccurs="1" minOccurs="0" name="PRDHA" nillable="true" type="string"/>
+				                    <element maxOccurs="1" minOccurs="0" name="PRDHA_TX" nillable="true" type="string"/>
+				                    <element maxOccurs="1" minOccurs="0" name="MATNR" nillable="true" type="string"/>
+				                    <element maxOccurs="1" minOccurs="0" name="MAKTX" nillable="true" type="string"/>
+				                    <element maxOccurs="1" minOccurs="0" name="ERDAT" nillable="true" type="string"/>
+				                    <element maxOccurs="1" minOccurs="0" name="IS_GUBUN" nillable="true" type="string"/>
+				                    <element maxOccurs="1" minOccurs="0" name="STCD2" nillable="true" type="string"/>
+				                    <element maxOccurs="1" minOccurs="0" name="STCD1" nillable="true" type="string"/>
+				                    <element maxOccurs="1" minOccurs="0" name="MEMBER_SHIP_YN" nillable="true" type="string"/>
+				                </sequence>
+				              </complexType>
+				            </element>
+				            <element maxOccurs="1" minOccurs="0" name="ES_RETURN"  nillable="true">
+                                <complexType>
+                                    <sequence>
+                                        <element maxOccurs="1" minOccurs="0" name="TYPE" nillable="true" type="string"/>
+                                        <element maxOccurs="1" minOccurs="0" name="CODE" nillable="true" type="string"/>
+                                        <element maxOccurs="1" minOccurs="0" name="MESSAGE" nillable="true" type="string"/>
+                                    </sequence>
+                                  </complexType>
+				            </element>
+                            <element maxOccurs="1" minOccurs="0" name="E_CUST_TP" nillable="true" type="string"/>
+							<element maxOccurs="1" minOccurs="0" name="E_CUST_TP_NM" nillable="true" type="string"/>
+							<element maxOccurs="1" minOccurs="0" name="E_MS_LVL" nillable="true" type="string"/>
+							<element maxOccurs="1" minOccurs="0" name="E_USE_TP" nillable="true" type="string"/>
+							<element maxOccurs="1" minOccurs="0" name="E_XC_E_TIME" nillable="true" type="string"/>
+                        </sequence>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

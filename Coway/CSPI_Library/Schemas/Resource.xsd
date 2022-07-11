@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.cspi_library.org/Resource" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.cspi_library.org/Resource">
+
+    <element name="Engine" type="tns:EngineReousrce"></element>
+
+    <complexType name="EngineReousrce">
+    	<sequence>
+    		<element name="Host" type="string"></element>
+    		<element name="EngineName" type="string"></element>
+    		<element name="Pid" type="string"></element>
+    		<element name="CpuUsage" type="decimal"></element>
+    		<element name="ThreadCount" type="string"></element>
+    		<element name="Heap" type="tns:HeapMemory"></element>
+    		<element name="NonHeap" type="tns:NonHeapMemory"></element>
+    		<element name="CheckSeq" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="HeapMemory">
+    	<sequence>
+    		<element name="InitHeap" type="int"></element>
+    		<element name="MaxHeap" type="int"></element>
+    		<element name="UsedHeap" type="int"></element>
+    		<element name="CommittedHeap" type="int"></element>
+    	</sequence>
+    </complexType>
+    
+    <complexType name="NonHeapMemory">
+    	<sequence>
+    		<element name="InitNonHeap" type="int"></element>
+    		<element name="MaxNonHeap" type="int"></element>
+    		<element name="UsedNonHeap" type="int"></element>
+    		<element name="CommittedNonHeap" type="int"></element>
+    	</sequence>
+    </complexType>
+</schema>

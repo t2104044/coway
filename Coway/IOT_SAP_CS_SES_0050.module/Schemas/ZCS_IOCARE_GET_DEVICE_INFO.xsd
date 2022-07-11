@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ZCS_IOCARE_GET_DEVICE_INFO" xmlns:tns="http://www.example.org/ZCS_IOCARE_GET_DEVICE_INFO" elementFormDefault="qualified" xmlns:hd="http://www.example.org/HEADER">
+<import namespace="http://www.example.org/HEADER"></import>
+<element name="ZCS_IOCARE_GET_DEVICE_INFO_req">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="I_ENC_ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_MOB_NUM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_PERNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_SYSTEM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_S_TIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="ET_ITEM" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SERNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="ET_ESB" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="IF_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IF_UUID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IF_HOST" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IF_DATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IF_ADDITIONAL_DATA" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RST_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RST_MSG" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+
+<element name="ZCS_IOCARE_GET_DEVICE_INFO_rsp">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="E_AUTH" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_MESSAGE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_REPORT_DATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_XC_E_TIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="ET_ITEM" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SERNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>

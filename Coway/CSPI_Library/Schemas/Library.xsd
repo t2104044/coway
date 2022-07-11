@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.cspi_library.org/Library" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:Library="http://www.cspi_library.org/Library">
+
+
+    <complexType name="Interface">
+    	<sequence>
+    		<element name="Etc" type="string"></element>
+    		<element name="SourceService" type="string"></element>
+    		<element name="TargetService" type="string"></element>
+    		<element name="Timeout" type="int"></element>
+    		<element name="Type" type="string"></element>
+    		<element name="Source" type="Library:System"></element>
+    		<element name="Target" type="Library:System"></element>
+    		<element name="AlertInfo" type="Library:AlertInfo"></element>
+    		<element name="FileInfo" type="Library:FileInfo"></element>
+    		<element name="LogInfo" type="Library:LogInfo"></element>
+    		<element name="RetryInfo" type="Library:RetryInfo"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="System">
+    	<sequence>
+    		<element name="System" type="string"></element>
+    		<element name="Protocol" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="AlertInfo">
+    	<sequence>
+    		<element name="AlertFlag" type="string"></element>
+    		<element name="MailFlag" type="string"></element>
+    		<element name="SMSFlag" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="FileInfo">
+    	<sequence>
+    		<element name="PostProcessingDir" type="string"></element>
+    		<element name="Source" type="Library:FileDetail"></element>
+    		<element name="Target" type="Library:FileDetail"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="FileDetail">
+    	<sequence>
+    		<element name="FileDir" type="string"></element>
+    		<element name="FileName" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="LogInfo">
+    	<sequence>
+    		<element name="DataSection" type="string"></element>
+    		<element name="DataSize" type="string"></element>
+    		<element name="Level" type="string"></element>
+    		<element name="Type" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="RetryInfo">
+    	<sequence>
+    		<element name="Flag" type="string"></element>
+    		<element name="Count" type="int"></element>
+    		<element name="Delay" type="int"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="InterfaceInfo">
+    	<sequence>
+    		<element name="InterfaceId" type="string"></element>
+    		<element name="Interface" type="Library:Interface"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="InterfaceId" type="string"></element>
+
+    <element name="DefaultInfo">
+    	<complexType>
+    		<sequence>
+    			<element name="AlertInfo" type="Library:AlertInfo"></element>
+    			<element name="LogInfo" type="Library:LogInfo"></element>
+    			<element name="RetryInfo" type="Library:RetryInfo"></element>
+    		</sequence>
+    	</complexType></element>
+
+    <element name="InterfaceInfos">
+    	<complexType>
+    		<sequence>
+    			<element name="InterfaceInfo" type="Library:InterfaceInfo" maxOccurs="unbounded" minOccurs="0"></element>
+    		</sequence>
+    	</complexType></element>
+
+    <complexType name="BaseInfo">
+    	<sequence>
+    		<element name="GroupInterfaceInfo" type="string"></element>
+    		<element name="InterfaceInfo" type="Library:InterfaceInfo" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="BaseInfos">
+    	<complexType>
+    		<sequence>
+    			<element name="WorkGroup" type="string"></element>
+    			<element name="BaseInfo" type="Library:BaseInfo" maxOccurs="unbounded" minOccurs="0"></element>
+    		</sequence>
+    	</complexType></element>
+
+    <element name="GroupInterfaceId" type="string"></element>
+
+    <element name="InterfaceInfo" type="Library:InterfaceInfo"></element>
+
+    <element name="InterfaceSysId" type="string"></element>
+
+</schema>

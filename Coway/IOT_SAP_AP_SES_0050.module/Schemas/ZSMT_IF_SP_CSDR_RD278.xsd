@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ZSMT_IF_SP_CSDR_RD278" xmlns:tns="http://www.example.org/ZSMT_IF_SP_CSDR_RD278" elementFormDefault="qualified" xmlns:hd="http://www.example.org/HEADER">
+<import namespace="http://www.example.org/HEADER"></import>
+<element name="ZSMT_IF_SP_CSDR_RD278_req">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="I_GOODS_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_PRDHA" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="O_ITAB" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="STEP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STEP_TEXT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RSN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RSN_TEXT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+
+<element name="ZSMT_IF_SP_CSDR_RD278_rsp">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="E_RETURN" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MESSAGE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="O_ITAB" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="STEP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STEP_TEXT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RSN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RSN_TEXT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>

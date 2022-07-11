@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.cspi_library.org/Log"
+	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:Log="http://www.cspi_library.org/Log">
+
+
+
+
+	<complexType name="Info">
+		<sequence>
+			<element name="InterfaceSysId" type="string"></element>
+			<element name="InterfaceId" type="string"></element>
+			<element name="Phase" type="string"></element>
+			<element name="Seq" type="string" maxOccurs="1"
+				minOccurs="0">
+			</element>
+			<element name="JobId" type="string"></element>
+			<element name="BizUuId" type="string" minOccurs="0"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="Detail">
+		<sequence>
+			<element name="Key" type="string"></element>
+			<element name="Value" type="string"></element>
+		</sequence>
+	</complexType>
+
+
+	<complexType name="Error">
+		<sequence>
+			<element name="StackTrace" type="string"></element>
+			<element name="Msg" type="string"></element>
+			<element name="FullClass" type="string"></element>
+			<element name="ProcessStack" type="string"></element>
+			<element name="MsgCode" type="string" maxOccurs="1"
+				minOccurs="0">
+			</element>
+			<element name="Data" maxOccurs="1" minOccurs="0">
+				<complexType>
+					<sequence>
+						<any namespace="##any" processContents="skip"></any>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+
+
+	<element name="HostName" type="string"></element>
+
+	<element name="DateTime" type="dateTime"></element>
+
+	<element name="SendLog">
+		<complexType>
+			<sequence>
+				<element name="HostName" type="string"></element>
+				<element name="LoggingDate" type="dateTime"></element>
+				<element name="Log" type="Log:Log"></element>
+			</sequence>
+		</complexType>
+	</element>
+
+	<complexType name="Log">
+		<sequence>
+			<element name="Info" type="Log:Info"></element>
+			<element name="Detail" type="Log:Detail"
+				maxOccurs="unbounded" minOccurs="0">
+			</element>
+			<element name="Error" type="Log:Error" maxOccurs="1"
+				minOccurs="0">
+			</element>
+		</sequence>
+	</complexType>
+
+	<element name="SetLog" type="Log:Log"></element>
+</schema>

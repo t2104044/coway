@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ZSD_1000_A0111_DISPLAY" xmlns:tns="http://www.example.org/ZSD_1000_A0111_DISPLAY" elementFormDefault="qualified" xmlns:hd="http://www.example.org/HEADER">
+<import namespace="http://www.example.org/HEADER"></import>
+<element name="ZSD_1000_A0111_DISPLAY_req">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="I_MPRM_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_REGER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_SALE_HQ_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_STATUS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_VKBUR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_VKGRP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_WPIN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_PERNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_SYSTEM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_S_TIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="T_A0111_AMT" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="PAY_CAT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PAY_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PAY_CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PAY_CODE_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TOTAL_PRICE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CASH_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CARD_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MOVE_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETC_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="T_A0111_GOODS" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="GOODS_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_GRADE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ORDER_QTY" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="LINK_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="LINK_ID_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PRICE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DC_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="INST_DT2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RTN_CONF_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RENTAL_YEARS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVL_QTY_CHK" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FALSE_GI_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PLAN_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ONCE_GRADE1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ONCE_GRADE2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ONCE_GRADE3" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="T_RIO_LIST" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="MANDT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="APPL_YM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SSN_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CUST_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GRADE_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GRADE_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="BEST_R1_PA" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="BEST_R1_P1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="BEST_R1_P2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="BEST_R1_P3" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="BEST_R1_P4" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REGER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REG_YMD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REG_TM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CHGER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CHG_YMD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CHG_TM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="E_GIFT_EMART" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="PAY_CAT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PAY_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PAY_CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PAY_CODE_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TOTAL_PRICE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CASH_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CARD_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MOVE_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETC_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="T_A0111_ORDER_LIST" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="STATUS_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REQ_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REQ_TM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CIF_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REGER_DT_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REGER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REGER_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TELNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="INST_UEMPL_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PERNR_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PERNR_TEL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PERNR_MOB" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PERNR_DEPT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_ID_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="LGORT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="BIGO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REG_YMD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REG_TM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RTN_CAN_UEMPL_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SNAME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+
+<element name="ZSD_1000_A0111_DISPLAY_rsp">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="E_A0111_USECUST" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="KATR2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="USR_LTD_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="USR_LTD_NO_W" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="USE_CUST_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="NAME1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TEL_NUMBER" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TELF2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="POST_SEQ" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="POST_CODE1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STREET" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CITY1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CITY2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STCDT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="EXTENSION2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="LOCCO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FIRST_INST_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RECONTR_CNT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STCD4" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="NAME4" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IS_GUBUN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="NO_TAX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SMTP_ADDR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CERTI_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CERTI_RSN_TXT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="BAHNS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="KATR1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="KATR1_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="KATR6" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="KATR6_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="E_ELECCONTSHPMT" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="EC_SH_GB" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RSTT_GB" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RSTT_HP_COM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RSTT_EMAIL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="E_SIGN_IMG" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="JOB_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="JOB_TP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="JOB_SEQ" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="E_CONTRACT_CUST" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="KATR2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CONTRACT_LTD_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CONTRACT_CUST_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="NAME1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TEL_NUMBER" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TELF2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="POST_SEQ" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="POST_CODE1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STREET" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CITY1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CITY2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STCDT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="EXTENSION2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="LOCCO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FIRST_INST_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RECONTR_CNT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STCD4" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="NAME4" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IS_GUBUN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SMTP_ADDR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CERTI_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CERTI_RSN_TXT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="BAHNS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="KATR1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="KATR1_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="KATR6" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="KATR6_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="E_RETURN" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MESSAGE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="E_A0111_DOC" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="STATUS_NM1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STATUS_NM2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="JOB_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ARRIVE_TM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODY_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODY_HP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODY_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="ES_ETC_INFO" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="MORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MAT_CHGYN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="E_ADD_INFO" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="MANDT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SEQ" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="WATER_QLTY" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="WATERWORKS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SOCKET" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SOCKET_POSI" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="WATER_QLTY2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SOFT_STAT_1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SOFT_STAT_2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SOFT_STAT_3" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SOFT_STAT_4" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="INST_SPC" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="INST_DETAIL1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="INST_DETAIL2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="INST_DETAIL3" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="INST_DETAIL4" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DJ_CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DJ_CODE_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="OTHER_RTN_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="HD_SVC_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="WIFI_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SPHONE_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SHARE_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SERVICE_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ELEC_RANGE_BLT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GAS_STOP_CK" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GDSK_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="APT_CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="WARTERMAP_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CMCONNECTION_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ZMF_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DISUSE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ELEVATOR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="LADDER" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ELEVATOR2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="WINDOW_WIDTH" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="INST_DOOR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IN_DOOR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="COMB_M" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="COMB_F" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GUNBUN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FILE_NAME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ORG_FILE_NAME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FILE_PATH" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ELEVATOR_S" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="LADDER_S" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="EARTH_S" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="EPSERIAL_S" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REGER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REG_YMD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REG_TM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CHGER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CHG_YMD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CHG_TM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="E_A0111_PLACE" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="GUBUN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ZIP_SEQ" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ZIP1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ZIP2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ADDR1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ADDR2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TEL_AREA" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TEL_EXT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TEL_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TEL_IN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="HP_COM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="HP_EXT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="HP_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FLOOR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TPLNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="INSTALL_COUNT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TEL_NUMBER" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MOB_NUMBER" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ADRC_TOTAL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ORG_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CERTI_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CERTI_RSN_TXT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AUFNR1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="E_A0111_BASE" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CONTRACT_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GROUP_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SALE_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETC_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="USE_TP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REGI_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RENTAL_YEARS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PRE_ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="INS_PLACE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="USER_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="COM_CD_INS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="COM_CD_SALE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REGER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CHGER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STATUS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REGER_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="COM_CD_INS_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REGER_DEPTNM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REG_YMD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REG_TM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CHG_YMD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CHG_TM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CHGER_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CHG_DEPTNM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="COM_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="VIP_GRADE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REORDER_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CAN_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CURRENT_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ORDER_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="YN_ISPREINSTALL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="YN_PRECUSTOMER" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="YN_ARREAR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SALE_PATH" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FAMILY_RELATION" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MAIN_STATUS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CREDIT_SEQ" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="WORDER_TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="COST_CENTER" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GROUP_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="VKORG" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_GUBUN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AI_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AI_CUST_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="POWER_SAVE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CMS_AGREE_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TELDB_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CU_RELATION" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CLOSE_STATUS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REQ_ORDER_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REFURB_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REORDER_FLAG" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SALE_PRM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="LOTTE_ORD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CHANNEL_ORD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CHANNEL_ORD_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ACCEPT_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="HB_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RECOM_CUST_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RECOM_CUST_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RECOM_CUST_TEL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RECOM_CUST_TEL2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETICD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETICD_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETICN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETICM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETICT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETICH" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETIFC" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETIGC" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETIZIP1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETIZIP2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETIADDR1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETIADDR2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETISTCD2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETISTCD_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETIKFREPRE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETIKFTBUS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETIKFTIND" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETIFXDAY" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MEM_STPYN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ADSVC" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MEM_ADSVC" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ADSVC_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MEM_ADSVC_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CONTACT_UEMPL_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REQ_CUST_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PRM_ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="LESGB" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RECOM_ORD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RECOM_FE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ZCON" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="POINT_QTY" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AI_IND_CU" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AI_IND_AC" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PRE_YN2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TEMP_CAN_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TEMP_CAN_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ACCEPTER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ACCEPTER_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ACCEPT_YMD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ACCEPT_TM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PLACE_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PLACE_ID_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="COM_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DELI_PLACE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DELI_PLACE_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DELI_PLACE_TEL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DELI_PLACE_FAX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CUST_REQ_DESC" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CUST_REQ_DESC2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STATUS_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IF_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IF_TEXT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CREDIT_STATUS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CHECK_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="POWER_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PLACE_ID2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PLACE_ID2_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DUTY_MONTH" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DUTY_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REGI_ID_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="USE_DUTY_MONTH" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FREE_MONTH" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SALE_PRM_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DELI_UPPLACE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DELI_UPPLACE_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DELI_UPPLACE_TEL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DELI_UPPLACE_FAX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="VKGRP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PRM_CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MS_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MS_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SAVE_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SAVE_AMOUNT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SAVE_TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ZCHG_TERM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MS_YYMM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="APP_ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STATUS7" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="C_CERTI_TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="C_MOB" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CARDN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IMAGE_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CARDCOM_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CARD_COM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MEM_NUMBER" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MEM_GUBUN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SVCDT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SVAMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DJ_CODE_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PROC_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PROC_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PROC_VKGRP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PROC_VKGRP_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IMAGE_NO2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="IMAGE_PATH" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETC_ID_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MANYORDER_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MANYORDER_TP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MANYORDER_ST" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SC_MAT_ORDER" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SC_MAT_GOODS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="C_CERTI_TYPE_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="COMBI_RATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="COMBI_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="COMBI_GB" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FILTER_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="LESGB_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="OWNER_MONTH" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="USE_DUTY_YEAR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CON_DIS_YEAR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FAMILY_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FAMILY_STATUS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="E_A0111_SALE" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="SALE_UEMPL_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SALE_ORG_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SALE_UP_ORG" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SALE_HQ_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SALE_TEL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SALE_ORG_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SALE_UEMPL_TEL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SALE_UEMPL_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="VKORG" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="VTWEG" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SPART" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="VKBUR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="VKBUR_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="VKGRP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RECOM_UEMPL_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RECOM_SALE_TEL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RECOM_SALE_ORG_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RECOM_SALE_UEMPL_TEL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RECOM_SALE_UEMPL_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="G_VKGRP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="G_VKGRP_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="G_VKGRP_TEL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ORG_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ORG_TXT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TEL_NUMBER" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODY_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODY_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODY_HP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="APP_CALL_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="APP_PERNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="APP_NAME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="APP_VKGRP_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="APP_TEL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SALE_MNG_HP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SALE_UP_TEL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SCODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FIRE_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="E_PACKAGE" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="PACKAGE_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PACKAGE_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PACKAGE_ID_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PACKAGE_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CONTRACT_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GUBUN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GUBUN_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DC_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DC_RATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FLAG" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REGER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REG_YMD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REG_TM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="E_ACCEPT_GB" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_ACCEPT_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_ADDR1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_ADDR2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_ADV_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_BENEFIT_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_BILL_REQ_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_CERTI_CHK" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_CERTI_DATA" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_CERTI_TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_CHECK_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_COLL_COM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_CRP_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_CUST_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_C_MOB" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_DC_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_DESC_TXT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_DOC_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_EXPRESS_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_EXTR2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_EXTR2_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_FRAME_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_FREE_END_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_GIFT_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_GIFT_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_GRADE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_GRADE_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_GROUP_GUBUN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_HP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_INST_TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_IRR_TEXT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_JOINT_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_LOVE_ORD_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_MOTI_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_NEW_ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_PACKAGE_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_PACKAGE_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_POWER_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_POWER_RSN_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_PRM_CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_PRM_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_PRODH" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_RECV_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_REC_GB" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_SALE_HQ_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_TEL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_TEMPO_GUBUN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_VKGRP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_XC_E_TIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_ZIP1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="E_ZIP2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="T_A0111_AMT" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="PAY_CAT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PAY_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PAY_CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PAY_CODE_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TOTAL_PRICE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CASH_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CARD_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MOVE_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETC_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="T_A0111_GOODS" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="GOODS_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_GRADE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ORDER_QTY" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="LINK_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="LINK_ID_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PRICE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DC_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="INST_DT2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RTN_CONF_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RENTAL_YEARS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AVL_QTY_CHK" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="FALSE_GI_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PLAN_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ONCE_GRADE1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ONCE_GRADE2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ONCE_GRADE3" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="T_RIO_LIST" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="MANDT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="APPL_YM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SSN_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CUST_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GRADE_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GRADE_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="BEST_R1_PA" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="BEST_R1_P1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="BEST_R1_P2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="BEST_R1_P3" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="BEST_R1_P4" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REGER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REG_YMD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REG_TM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CHGER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CHG_YMD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CHG_TM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="E_GIFT_EMART" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="PAY_CAT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PAY_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PAY_CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PAY_CODE_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TOTAL_PRICE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CASH_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CARD_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MOVE_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ETC_AMT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="T_A0111_ORDER_LIST" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="STATUS_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REQ_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REQ_TM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CIF_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REGER_DT_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REGER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REGER_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="TELNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="INST_UEMPL_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PERNR_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PERNR_TEL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PERNR_MOB" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PERNR_DEPT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_ID_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="GOODS_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="LGORT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="BIGO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REG_YMD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REG_TM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RTN_CAN_UEMPL_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SNAME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>

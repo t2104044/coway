@@ -1,0 +1,5 @@
+description.autobuilding=false
+description.buildorder=CSPI_Library/CSPI_Utility/IOT_SAP_AP_SES_0050.module/IOT_SAP_AP_SES_0050/IOT_SAP_CS_SES_0050.module/IOT_SAP_CS_SES_0050/IOT_SAP_SD_SES_0050.module/IOT_SAP_SD_SES_0050/SAP_IOT_SD_SSE_0050.module/SAP_IOT_SD_SSE_0050/DbMig/DbMig.application
+description.defaultbuildorder=false
+eclipse.preferences.version=1
+version=1

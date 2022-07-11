@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:hd="http://www.example.org/HEADER"
+	targetNamespace="http://www.example.org/DataNotParsed" xmlns:tns="http://www.example.org/DataNotParsed"
+	elementFormDefault="qualified">
+	<import namespace="http://www.example.org/HEADER" />
+	<element name="EBSGram">
+		<complexType>
+			<sequence>
+				<element maxOccurs="1" minOccurs="1" ref="hd:HEADER" />
+				<element name="DATA" maxOccurs="unbounded" minOccurs="0">
+					<complexType>
+						<sequence>
+							<any minOccurs="0" maxOccurs="unbounded"></any>
+						</sequence>
+
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

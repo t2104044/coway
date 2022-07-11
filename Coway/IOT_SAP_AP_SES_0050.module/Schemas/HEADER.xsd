@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/HEADER"
+	xmlns:tns="http://www.example.org/HEADER" elementFormDefault="qualified">
+	<element name="HEADER">
+		<complexType>
+			<sequence>
+				<element name="IF_ID" type="string" />
+				<element maxOccurs="1" minOccurs="0" name="IF_UUID" type="string" />
+				<element maxOccurs="1" minOccurs="0" name="IF_HOST" type="string" />
+				<element maxOccurs="1" minOccurs="0" name="IF_DATE" type="string" />
+				<element maxOccurs="1" minOccurs="0" name="IF_ADDITIONAL_DATA"
+					type="string" />
+				<element maxOccurs="1" minOccurs="0" name="RST_CD" type="string" />
+				<element maxOccurs="1" minOccurs="0" name="RST_MSG" type="string" />
+			</sequence>
+		</complexType>
+	</element>
+</schema>

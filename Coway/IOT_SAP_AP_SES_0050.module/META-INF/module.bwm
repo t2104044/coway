@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:property="http://ns.tibco.com/bw/property" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_F2ankN-qEeu-rJxJkFy41Q" targetNamespace="http://tns.tibco.com/bw/composite/IOT_SAP_AP_SES_0050.module" name="IOT_SAP_AP_SES_0050.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_GZHsAN-qEeu-rJxJkFy41Q" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_GZYKsN-qEeu-rJxJkFy41Q" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_GZ2r0N-qEeu-rJxJkFy41Q" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_GaHKgN-qEeu-rJxJkFy41Q" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_GaaFcN-qEeu-rJxJkFy41Q" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Gang0N-qEeu-rJxJkFy41Q" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Ga1jQN-qEeu-rJxJkFy41Q" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_GbEMwN-qEeu-rJxJkFy41Q" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_GbS2QN-qEeu-rJxJkFy41Q" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_awq3IN-uEeu2O6DqMJGJTQ" name="Encoding" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_a7LeAN-uEeu2O6DqMJGJTQ" name="SAPTimeout" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_od6DMN-uEeu2O6DqMJGJTQ" name="SAPAppServer" type="XMLSchema:string" publicAccess="true"/>
+  <sca:property xmi:id="_od6DMd-uEeu2O6DqMJGJTQ" name="SAPSystemNumber" type="XMLSchema:string" publicAccess="true"/>
+  <sca:property xmi:id="_od6DMt-uEeu2O6DqMJGJTQ" name="SAPClient" type="XMLSchema:string" publicAccess="true"/>
+  <sca:property xmi:id="_od6DM9-uEeu2O6DqMJGJTQ" name="SAPUserName" type="XMLSchema:string" publicAccess="true"/>
+  <sca:property xmi:id="_od6DNN-uEeu2O6DqMJGJTQ" name="SAPPassword" type="property:password" publicAccess="true"/>
+  <sca:property xmi:id="_od6DNd-uEeu2O6DqMJGJTQ" name="SAPSystemName" type="XMLSchema:string" publicAccess="true"/>
+  <sca:property xmi:id="_od6DNt-uEeu2O6DqMJGJTQ" name="SAPMsgServer" type="XMLSchema:string" publicAccess="true"/>
+  <sca:property xmi:id="_od6DN9-uEeu2O6DqMJGJTQ" name="SAPLogonGroup" type="XMLSchema:string" publicAccess="true"/>
+  <sca:property xmi:id="_od6DON-uEeu2O6DqMJGJTQ" name="SAPProgramID" type="XMLSchema:string" publicAccess="true"/>
+  <sca:property xmi:id="_od6DOd-uEeu2O6DqMJGJTQ" name="SAPGatewayService" type="XMLSchema:string" publicAccess="true"/>
+  <sca:property xmi:id="_od6DOt-uEeu2O6DqMJGJTQ" name="SAPGatewayHost" type="XMLSchema:string" publicAccess="true"/>
+  <sca:property xmi:id="_od6DO9-uEeu2O6DqMJGJTQ" name="SAPSncMode" type="XMLSchema:string" publicAccess="true"/>
+  <sca:property xmi:id="_od6DPN-uEeu2O6DqMJGJTQ" name="SAPSncPartnername" type="XMLSchema:string" publicAccess="true"/>
+  <sca:property xmi:id="_od6DPd-uEeu2O6DqMJGJTQ" name="SAPSncQop" type="XMLSchema:string" publicAccess="true"/>
+  <sca:property xmi:id="_od6DPt-uEeu2O6DqMJGJTQ" name="SAPSncMyname" type="XMLSchema:string" publicAccess="true"/>
+  <sca:property xmi:id="_od6DP9-uEeu2O6DqMJGJTQ" name="SAPSncLib" type="XMLSchema:string" publicAccess="true"/>
+  <sca:property xmi:id="_5TR6gGE3Eey1ZdERk9YG9w" name="SAPMaxconnectionCounts" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_ABiiEN-uEeu2O6DqMJGJTQ" name="/Destination/QueueName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_89HVMOX3Eeu37MrQwDQ2CQ" name="/Destination/QueueName_Reload" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_9BmzoOX3Eeu37MrQwDQ2CQ" name="/Destination/QueueName_ReloadAll" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_R72LgN-uEeu2O6DqMJGJTQ" name="/Resource/ems/ProviderURL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_R9qwcN-uEeu2O6DqMJGJTQ" name="/Resource/ems/Password" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_R_k08N-uEeu2O6DqMJGJTQ" name="/Resource/ems/UserName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_SBpRgN-uEeu2O6DqMJGJTQ" name="/Resource/ems/Timeout" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_tEKAIN-vEeu2O6DqMJGJTQ" name="ComponentIOT_SAP_AP_SES_RCV" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_tEKAId-vEeu2O6DqMJGJTQ" processName="common.M_SetBaseInfo_OnStartUp"/>
+  </sca:component>
+  <sca:component xmi:id="_vxwxsN-2Eeu2O6DqMJGJTQ" name="ComponentIOT_SAP_AP_SES_0002" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_vxwxsd-2Eeu2O6DqMJGJTQ" processName="iot_sap_ap_ses_0050.IOT_SAP_AP_SES_0002"/>
+  </sca:component>
+  <sca:component xmi:id="_wYKDUN-2Eeu2O6DqMJGJTQ" name="ComponentIOT_SAP_AP_SES_0003" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_wYKDUd-2Eeu2O6DqMJGJTQ" processName="iot_sap_ap_ses_0050.IOT_SAP_AP_SES_0003"/>
+  </sca:component>
+  <sca:component xmi:id="_xDdqIN-2Eeu2O6DqMJGJTQ" name="ComponentIOT_SAP_AP_SES_0004" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_xDdqId-2Eeu2O6DqMJGJTQ" processName="iot_sap_ap_ses_0050.IOT_SAP_AP_SES_0004"/>
+  </sca:component>
+  <sca:component xmi:id="_xrZz4N-2Eeu2O6DqMJGJTQ" name="ComponentIOT_SAP_AP_SES_0005" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_xrZz4d-2Eeu2O6DqMJGJTQ" processName="iot_sap_ap_ses_0050.IOT_SAP_AP_SES_0005"/>
+  </sca:component>
+  <sca:component xmi:id="_7y5BQN-2Eeu2O6DqMJGJTQ" name="ComponentIOT_SAP_CS_SES_RCV" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_7y5BQd-2Eeu2O6DqMJGJTQ" processName="common.IOT_SAP_AP_SES_RCV"/>
+  </sca:component>
+  <sca:component xmi:id="_FQ0QwOX4Eeu37MrQwDQ2CQ" name="ComponentM_SetBaseInfo_Reload" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_FQ0QweX4Eeu37MrQwDQ2CQ" processName="common.M_SetBaseInfo_Reload"/>
+  </sca:component>
+  <sca:component xmi:id="_GROk4OX4Eeu37MrQwDQ2CQ" name="ComponentM_SetBaseInfo_ReloadAll" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_GROk4eX4Eeu37MrQwDQ2CQ" processName="common.M_SetBaseInfo_ReloadAll"/>
+  </sca:component>
+  <sca:component xmi:id="_bUn6YOuDEeuIOvtiSl6n8w" name="ComponentCopyOfIOT_SAP_AP_SES_0001" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_bUn6YeuDEeuIOvtiSl6n8w" processName="iot_sap_ap_ses_0050.IOT_SAP_AP_SES_0001"/>
+  </sca:component>
+  <sca:component xmi:id="_wUgIENWrEey3_aMeLhx72Q" name="ComponentM_Get_EngineResource_byTimer" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_wUgIEdWrEey3_aMeLhx72Q" processName="common.M_Get_EngineResource_byTimer"/>
+  </sca:component>
+</sca:composite>

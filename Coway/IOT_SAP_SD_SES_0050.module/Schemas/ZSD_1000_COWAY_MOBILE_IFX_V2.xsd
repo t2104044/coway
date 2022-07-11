@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ZSD_1000_COWAY_MOBILE_IFX_V2" xmlns:tns="http://www.example.org/ZSD_1000_COWAY_MOBILE_IFX_V2" elementFormDefault="qualified" xmlns:hd="http://www.example.org/HEADER">
+<import namespace="http://www.example.org/HEADER"></import>
+<element name="ZSD_1000_COWAY_MOBILE_IFX_V2_req">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="I_FROM_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_TO_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_PERNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_SYSTEM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_S_TIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="T_2411" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CONTRACT_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CONTRACT_ID_TX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SEQ" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CONF_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_SERNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_SERNR_OLD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_TELF1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_TELF2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_SMTP_ADDR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_INBDT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_PRDHA" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_PRDHA_TX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_MATNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_MAKTX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_ERDAT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_IS_GUBUN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_STCD2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_STCD1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_SERNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_SERNR_OLD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_TELF1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_TELF2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_SMTP_ADDR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_INBDT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_PRDHA" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_PRDHA_TX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_MATNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_MAKTX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_ERDAT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_IS_GUBUN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_STCD2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_STCD1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+
+<element name="ZSD_1000_COWAY_MOBILE_IFX_V2_rsp">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="ES_RETURN" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MESSAGE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="E_XC_E_TIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="T_2411" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CONTRACT_ID" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CONTRACT_ID_TX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SEQ" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CONF_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_SERNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_SERNR_OLD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_TELF1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_TELF2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_SMTP_ADDR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_INBDT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_PRDHA" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_PRDHA_TX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_MATNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_MAKTX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_ERDAT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_IS_GUBUN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_STCD2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="B_STCD1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_SERNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_SERNR_OLD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_TELF1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_TELF2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_SMTP_ADDR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_INBDT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_PRDHA" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_PRDHA_TX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_MATNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_MAKTX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_ERDAT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_IS_GUBUN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_STCD2" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="A_STCD1" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>

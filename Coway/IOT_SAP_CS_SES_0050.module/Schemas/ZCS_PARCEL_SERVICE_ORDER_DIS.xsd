@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ZCS_PARCEL_SERVICE_ORDER_DIS" xmlns:tns="http://www.example.org/ZCS_PARCEL_SERVICE_ORDER_DIS" elementFormDefault="qualified" xmlns:hd="http://www.example.org/HEADER">
+<import namespace="http://www.example.org/HEADER"></import>
+<element name="ZCS_PARCEL_SERVICE_ORDER_DIS_req">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="I_ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_PERNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_SYSTEM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_XC_S_TIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="ET_ITEM" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AUFNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RECV_DTL_TP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RECV_DTL_TP_TX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PSTATUS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PSTATUS_TX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AUFNR_MAIN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ERDAT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ERZET" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RFCDATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RFCTIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MSGTY" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MSGLIN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DLV_GB" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DLV_GB_TXT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="WBL_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REAL_NAME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REAL_NAME_R" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="BRAN_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="BRAN_TEL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DLV_EMP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DLV_TEL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STATUS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STATUS_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ZDCNUM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SEL_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+
+<element name="ZCS_PARCEL_SERVICE_ORDER_DIS_rsp">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="ES_RETURN" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MESSAGE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="E_XC_E_TIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="ET_ITEM" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AUFNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RECV_DTL_TP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RECV_DTL_TP_TX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PSTATUS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PSTATUS_TX" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="AUFNR_MAIN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ERDAT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ERZET" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RFCDATE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RFCTIME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MSGTY" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MSGLIN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DLV_GB" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DLV_GB_TXT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="WBL_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REAL_NAME" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="REAL_NAME_R" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="BRAN_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="BRAN_TEL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DLV_EMP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="DLV_TEL" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STATUS" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="STATUS_NM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="ZDCNUM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="SEL_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>

@@ -1,0 +1,15 @@
+CIC_SAP_MM_BDS_0050.module|tibco.preference.bw.profileConfigProperties=PropertyFirstColumnId,0,250;Type,1,200;default,2,502
+EDU_SAP_MM_SES_0050.module|tibco.preference.bw.profileConfigProperties=PropertyFirstColumnId,0,250;Type,1,200;default,2,540
+EDU_SAP_MM_SES_0050|tibco.preference.bw.profileConfigProperties=PropertyFirstColumnId,0,200;default,1,347;DEV,2,452
+EPS_SAP_MM_SES_0050.module|tibco.preference.bw.profileConfigProperties=PropertyFirstColumnId,0,391;Type,1,200;default,2,556
+EPS_SAP_MM_SES_0050|tibco.preference.bw.profileConfigProperties=PropertyFirstColumnId,0,317;default,1,378;DEV,2,421;PRD,3,357
+IOT_SAP_AP_SES_0050|tibco.preference.bw.profileConfigProperties=PropertyFirstColumnId,0,200;DEV,1,376;default,2,362;PRD,3,488
+IOT_SAP_CS_SES_0050.module|tibco.preference.bw.profileConfigProperties=PropertyFirstColumnId,0,250;Type,1,200;default,2,448
+IOT_SAP_CS_SES_0050|tibco.preference.bw.profileConfigProperties=PropertyFirstColumnId,0,200;DEV,1,345;default,2,342;PRD,3,494
+IOT_SAP_SD_SES_0050|tibco.preference.bw.profileConfigProperties=PropertyFirstColumnId,0,200;DEV,1,305;default,2,355;PRD,3,448
+SAP_EPS_MM_SSE_0050|tibco.preference.bw.profileConfigProperties=PropertyFirstColumnId,0,200;DEV,2,478;PRD,3,424;default,1,312
+SAP_IOT_SD_SSE_0050|tibco.preference.bw.profileConfigProperties=PropertyFirstColumnId,0,341;DEV,1,274;default,2,236;PRD,3,387
+TEST.application|tibco.preference.bw.profileConfigProperties=PropertyFirstColumnId,0,200;default,1,476
+Utility.application|tibco.preference.bw.profileConfigProperties=PropertyFirstColumnId,0,200;default,1,416
+eclipse.preferences.version=1
+test.application|tibco.preference.bw.profileConfigProperties=PropertyFirstColumnId,0,200;default,1,437

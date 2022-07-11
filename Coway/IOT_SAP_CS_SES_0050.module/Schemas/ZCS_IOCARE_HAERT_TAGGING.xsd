@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ZCS_IOCARE_HAERT_TAGGING" xmlns:tns="http://www.example.org/ZCS_IOCARE_HAERT_TAGGING" elementFormDefault="qualified" xmlns:hd="http://www.example.org/HEADER">
+<import namespace="http://www.example.org/HEADER"></import>
+<element name="ZCS_IOCARE_HAERT_TAGGING_req">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="I_CONSULT_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_CONSULT_RSN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_CONSULT_TM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_CONSULT_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_CYCLE_CNT" type="string" maxOccurs="1" minOccurs="0"/>
+						<element name="I_FAUCET_CNT" type="string" maxOccurs="1" minOccurs="0"/>
+						<element name="I_FLOW_CNT" type="string" maxOccurs="1" minOccurs="0"/>
+						<element name="I_GOODS_CD" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_NFC_RSN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_NFC_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_PERNR" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="I_WATER" type="string" maxOccurs="1" minOccurs="0"/>
+						<element name="I_WATER_C" type="string" maxOccurs="1" minOccurs="0"/>
+						<element name="I_WATER_H" type="string" maxOccurs="1" minOccurs="0"/>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+
+<element name="ZCS_IOCARE_HAERT_TAGGING_rsp">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="ES_RETURN" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MESSAGE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>

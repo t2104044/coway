@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ZCS_IOCARE_HAERT_INFO" xmlns:tns="http://www.example.org/ZCS_IOCARE_HAERT_INFO" elementFormDefault="qualified" xmlns:hd="http://www.example.org/HEADER">
+<import namespace="http://www.example.org/HEADER"></import>
+<element name="ZCS_IOCARE_HAERT_INFO_req">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="I_ORDER_NO" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+						<element name="T_FT_YM" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="FT_YM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="T_HT_YM" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="HT_YM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="T_HT_DT" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="HT_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+
+<element name="ZCS_IOCARE_HAERT_INFO_rsp">
+	<complexType>
+		<sequence>
+			<element ref="hd:HEADER"></element>
+			<element maxOccurs="1" minOccurs="0" name="DATA">
+				<complexType>
+					<sequence>
+						<element name="ES_RETURN" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="TYPE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="CODE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="MESSAGE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="ES_SP_INFO" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="PROC_YN" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="PROC_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="RSRV_YM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="ES_HT_INFO" maxOccurs="1" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="CUST_TP" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="HT_CNT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="HT_YM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="HT_TOT_CNT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+									<element name="HT_CYCLE" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="T_FT_YM" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="FT_YM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="T_HT_YM" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="HT_YM" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+						<element name="T_HT_DT" maxOccurs="unbounded" minOccurs="0">
+							<complexType>
+								<sequence>
+									<element name="HT_DT" type="string" maxOccurs="1" minOccurs="0" nillable="true"/>
+								</sequence>
+							</complexType>
+						</element>
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.6"?>
+
+<target name="bw-runtime">
+<locations>
+
+<location path="/C:/Program Files/tibco/bw6/bw/6.7/config/drivers/shells/jdbc.mysql8.runtime//hotfix/runtime/plugins" type="Directory"/>
+<location path="/C:/Program Files/tibco/bw6/bw/6.7/config/drivers/shells/jdbc.mysql8.runtime//runtime/plugins" type="Directory"/>
+<location path="/C:/Program Files/tibco/bw6/bw/6.7/config/drivers/shells/jdbc.oracle.runtime//hotfix/runtime/plugins" type="Directory"/>
+<location path="/C:/Program Files/tibco/bw6/bw/6.7/config/drivers/shells/jdbc.oracle.runtime//runtime/plugins" type="Directory"/>
+<location path="/C:/Program Files/tibco/bw6/bw/palettes/amazons3/6.5//hotfix/runtime/plugins" type="Directory"/>
+<location path="/C:/Program Files/tibco/bw6/bw/palettes/amazons3/6.5//runtime/plugins" type="Directory"/>
+<location path="/C:/Program Files/tibco/bw6/bw/palettes/salesforce/6.9//hotfix/runtime/plugins" type="Directory"/>
+<location path="/C:/Program Files/tibco/bw6/bw/palettes/salesforce/6.9//runtime/plugins" type="Directory"/>
+<location path="/C:/Program Files/tibco/bw6/bw/palettes/sap/8.5//hotfix/runtime/plugins" type="Directory"/>
+<location path="/C:/Program Files/tibco/bw6/bw/palettes/sap/8.5//runtime/plugins" type="Directory"/>
+<location path="/C:/Program Files/tibco/bw6/bw/palettes/sp/6.1//hotfix/runtime/plugins" type="Directory"/>
+<location path="/C:/Program Files/tibco/bw6/bw/palettes/sp/6.1//runtime/plugins" type="Directory"/>
+
+
+<location path="C:/Program Files/tibco/bw6/bw/6.7/system/hotfix/lib/common" type="Directory"/>
+<location path="C:/Program Files/tibco/bw6/bw/6.7/system/lib/common" type="Directory"/>
+
+<location path="C:/Program Files/tibco/bw6/bw/6.7/system/hotfix/palettes" type="Directory"/>
+<location path="C:/Program Files/tibco/bw6/bw/6.7/system/palettes" type="Directory"/>
+
+<location path="C:/Program Files/tibco/bw6/bw/6.7/system/hotfix/shared" type="Directory"/>
+<location path="C:/Program Files/tibco/bw6/bw/6.7/system/shared" type="Profile"/>
+</locations>
+</target>

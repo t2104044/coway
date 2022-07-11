@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<msv:DocumentRoot xmlns:msv="http://tns.tibco.com/bw/model/core/moduleSV">
+  <moduleSharedVariables>
+    <moduleSharedVariable name="BaseInfos" type="{http://www.cspi_library.org/Library}BaseInfos" initialValueMode="none"/>
+    <moduleSharedVariable name="HostName" type="{http://www.cspi_library.org/Log}HostName" initialValueMode="none"/>
+  </moduleSharedVariables>
+  <import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Library" location="../Schemas/Library.xsd"/>
+  <import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.cspi_library.org/Log" location="../Schemas/Log.xsd"/>
+</msv:DocumentRoot>
